@@ -14,7 +14,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import CharacterTextSplitter
 
-INPUT_DATA_PATH = "./data.txt"
+INPUT_DATA_PATH = "./data/data.txt"
 question = "Who is Kazuto's daughter?"
 llm_path = './models/gpt4all-falcon-q4_0.gguf'
 
