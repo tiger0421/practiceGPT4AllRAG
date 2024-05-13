@@ -10,7 +10,7 @@ data_dir = "./data"
 index_path = "./storage"
 
 # ディレクトリの読み込み
-loader = DirectoryLoader(data_dir, glob="*.txt")
+loader = DirectoryLoader(data_dir, glob="*.csv")
 
 # 埋め込みモデルの読み込み
 embedding_model = HuggingFaceEmbeddings(
