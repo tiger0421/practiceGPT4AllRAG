@@ -1,10 +1,14 @@
-version: '3'
-
 services:
   gpt:
     image: gpt:latest
+    container_name: gpt
     build:
       context: .
       dockerfile: Dockerfile
-#     volumes:
-#       - ./themes:/var/www/html/wp-content/themes
+    network_mode: "none"
+    platform: linux/x86_64
+    tty: true
+    volumes:
+       - ./data:/root/practiceGPT4AllRAG/data:r
+    restart: always
+    command: /bin/bash

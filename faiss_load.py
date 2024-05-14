@@ -9,16 +9,17 @@ index_path = "./storage"
 
 # 埋め込みモデルの読み込み
 embedding_model = HuggingFaceEmbeddings(
-    model_name="intfloat/multilingual-e5-large"
+    model_name="./models/intfloat_multilingual-e5-large"
 )
 
 # インデックスの読み込み
 index = FAISS.load_local(
     folder_path=index_path,
-    embeddings=embedding_model
+    embeddings=embedding_model,
+    allow_dangerous_deserialization=True
 )
 
-question = "ゲームマスターは誰"
+question = input("question: ")
 embedding_vector = embedding_model.embed_query(question)
 
 #docs = index.similarity_search(question, k = 4)
