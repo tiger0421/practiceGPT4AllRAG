@@ -14,7 +14,7 @@ loader = DirectoryLoader(data_dir, glob="*.csv")
 
 # 埋め込みモデルの読み込み
 embedding_model = HuggingFaceEmbeddings(
-    model_name="intfloat/multilingual-e5-large"
+    model_name="./models/intfloat_multilingual-e5-large"
 )
 
 # テキストをチャンクに分割

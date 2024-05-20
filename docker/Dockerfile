@@ -15,13 +15,13 @@ RUN apt update && \
         libxext6 \
     && \
     pip install --no-cache-dir \
-        langchain \
-        langchain_community \
-        transformers \
-        faiss-cpu \
-        unstructured \
+        langchain==0.1.20 \
+        langchain_community==0.0.38 \
+        transformers==4.40.2 \
+        sentence-transformers==2.7.0 \
+        faiss-cpu==1.8.0 \
+        unstructured==0.13.7 \
         unstructured[all-docs] \
-        sentence-transformers \
     && \
     git clone https://github.com/tiger0421/practiceGPT4AllRAG.git && \
     python /tmp/dl_model.py && \

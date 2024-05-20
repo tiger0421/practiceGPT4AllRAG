@@ -9,6 +9,8 @@ services:
     platform: linux/x86_64
     tty: true
     volumes:
-       - ./data:/root/practiceGPT4AllRAG/data:r
+       - ../data:/root/practiceGPT4AllRAG/data:r
+       - ../storage:/root/practiceGPT4AllRAG/storage:rw
+       - ../script:/root/practiceGPT4AllRAG/script:rw
     restart: always
     command: /bin/bash
